@@ -95,7 +95,7 @@
 <meta property="og:description" content="首先声明：这并不是一篇教程。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/hexo.PNG">
-<meta property="og:updated_time" content="2017-11-03T03:25:24.427Z">
+<meta property="og:updated_time" content="2018-05-25T09:36:29.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+GithubPages&amp;CodingPages搭建自己的个人博客">
 <meta name="twitter:description" content="首先声明：这并不是一篇教程。">
@@ -343,15 +343,14 @@
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="搭博客难吗？"><a href="#搭博客难吗？" class="headerlink" title="搭博客难吗？"></a>搭博客难吗？</h2><p>我可以很负责人的告诉你：<strong>不仅不难，而且还很简单</strong>。</p>
 <p>那么，只有程序员才能搭建博客吗？</p>
 <p>或许你不相信，但我确实见过有许多非互联网行业的人也搭建了自己的博客。所以在搭建博客这件事上，确实没有专业之分。</p>
-<p>说白了，搭建博客就是用一堆别人的东西，来做一个你自己的东西：Hexo、主题、GithubPages、CodingPages，这些没一样是你的。而且这些都是免费的，除了买域名要花一只棒棒糖的钱（我搭建博客一共就花了3块钱）</p>
+<p>说白了，搭建博客就是用一堆别人的东西，来做一个你自己的东西：Hexo、主题、GithubPages，这些没一样是你的。而且这些都是免费的，除了买域名要花一只棒棒糖的钱（我搭建博客一共就花了3块钱）</p>
 <p>所以，人家设计的东西，你只要拿来用就可以了。</p>
-<h2 id="需要自己知道一些背景知识吗？"><a href="#需要自己知道一些背景知识吗？" class="headerlink" title="需要自己知道一些背景知识吗？"></a>需要自己知道一些背景知识吗？</h2><p>上边说了，搭建博客是没有专业之分的。你可以不知道什么是Github,hexo,GithubPages/CodingPages。甚至在技术方面什么也不懂。</p>
+<h2 id="需要自己知道一些背景知识吗？"><a href="#需要自己知道一些背景知识吗？" class="headerlink" title="需要自己知道一些背景知识吗？"></a>需要自己知道一些背景知识吗？</h2><p>上边说了，搭建博客是没有专业之分的。你可以不知道什么是Github,hexo,GithubPages。甚至在技术方面什么也不懂。</p>
 <p>可能你不相信，但结合我的搭建过程，我可以先给你说说他们都是怎么用的：</p>
 <ul>
 <li>Github：只是建立了一个github.io的库，没有账号的话可以注册一个。所以你有没有账号，会不会操作Github都没有关系。</li>
 <li>Hexo：只是下载了它的安装包和主题，你只需要知道一些部署博客的命令（不超过5条）。这些命令你也可以不会，因为文档里都有。</li>
 <li>GithubPages：是Github推出的功能，只要你建立了github.io库，就默认在使用。它相当于一个服务器，可以保存你的所有博客文件，是你电脑上博客站点的一份备份。也不用你了解。</li>
-<li>CodingPages：跟GithubPages作用相同，也是为了备份。所以你可以不用这个。但这个是国内的。为了双重保障和你的博客运行速度。建立还是设置下它。</li>
 </ul>
 <p>它们的概念下边会详细介绍。</p>
 <p>当然，搭建博客时你可以什么都不懂。但为了以后能更好的操作你的博客，建议在搭建成功之后，好好学习一下Github的使用。网上的教程也有很多，这里就不再赘述。</p>
@@ -411,10 +410,9 @@
 <h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><p>GitHub是一个代码托管网站和社交编程网站。这里聚集了世界上各路技术牛叉的大牛，和最优秀的代码库。是全球程序员的天堂。因为是国外的，所以界面全是英文。博主英语过了六级刚开始接触的时候心都突突，不过不要怕，不是还有翻译么，</p>
 <p>也有好多人调侃它是全球同性交友平台，其实我不太懂这个梗（女程序员也是很多的好么）</p>
 <h3 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h3><p>GitHub Pages是用来托管 GitHub 上静态网页的免费站点，其他的不多说。</p>
-<h3 id="CodingPages"><a href="#CodingPages" class="headerlink" title="CodingPages"></a>CodingPages</h3><p>和GithubPages功能相同，其对应的Coding平台也可以实现和Github相似的功能。但没有后者那么出名。是香港的公司，也算是国内的。</p>
 <p>看了这些，我相信你一定还是一脸懵逼的。但你可以简单理解成下边的的一段话：</p>
 <blockquote>
-<p>利用Hexo和GithubPages/CodingPages搭建博客，实际上就是利用Hexo在本地（你的电脑上）生成一个博客站点，然后利用网络将它传输到Github/Coding上进行拷贝和备份。再由Github和Coding提供的GithubPages/CodingPages服务将博客部署到网上，这样你的博客就可以作为一个独立的站点被别人浏览（正式上线）。同时你也可以在Github和Coding上管理你的博客。</p>
+<p>利用Hexo和GithubPages搭建博客，实际上就是利用Hexo在本地（你的电脑上）生成一个博客站点，然后利用网络将它传输到Github/Coding上进行拷贝和备份。再由Github和Coding提供的GithubPages服务将博客部署到网上，这样你的博客就可以作为一个独立的站点被别人浏览（正式上线）。同时你也可以在Github和Coding上管理你的博客。</p>
 </blockquote>
 <p>如果你还想了解更多背景知识，可以看看这篇文章：<a href="http://www.jianshu.com/p/0c3663c4f0ef" target="_blank" rel="external">搭建个人博客，你需要知道这些。</a></p>
 <hr>
@@ -433,7 +431,7 @@
 <p>1-7步请看：这篇博客不只前7步，如果你做完了就可以往下做，因为后边的都是属于个性化部分，所以博主在这里没有显示。<a href="https://zhuanlan.zhihu.com/p/26625249?utm_source=qq&amp;utm_medium=social" target="_blank" rel="external">GitHub+Hexo 搭建个人网站详细教程</a></p>
 <p>第8步请看：这篇博客是在你做完了前7步的基础上做的。<a href="http://www.jianshu.com/p/25587e049d54" target="_blank" rel="external">hexo干货系列：（四）将hexo博客同时托管到github和coding</a>，这篇博客也讲了怎么在CodingPages部署，可以和上一篇对照着看：<a href="http://redredleaf.me/%E6%88%91%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E7%AB%99%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B%E4%B8%80.html#more" target="_blank" rel="external">我的Hexo博客站的创建历程(一)【Github&amp;Coding双管齐下部署Hexo】</a></p>
 <h1 id="我的建议和踩过的坑"><a href="#我的建议和踩过的坑" class="headerlink" title="我的建议和踩过的坑"></a>我的建议和踩过的坑</h1><ul>
-<li>域名建议买.top，比较便宜。当然，土豪随意。</li>
+<li>域名建议买.top或.site，比较便宜。当然，土豪随意。</li>
 <li>下载Node.js或Git时，由于众所周知的原因，下载速度会很慢。这时你需要看Hexo的官方文档，上边给出了离线下载的地址：Hexdocs</li>
 <li>在安装Hexo这一步，hexo init blog及其之后的命令都是在Blog/blog这个目录下进行的，一定要注意，不能弄错了。博主刚开始就是搞错了路径，结果一直报错。。。</li>
 <li>在初始化这一步，如果报出了“Please tell me who you are”的错误，要下载Github桌面程序来解决。这样初始化时就会自动弹出登录窗口，直接登录就可以了。又是因为众所周知的原因，官方下载会很慢，所以博主分享了离线版：点击下载</li>
@@ -485,11 +483,7 @@
 <li>一定要细心，建议改一项个性化，先不要关闭你改过的文件，在重新生成部署没有错之后在关闭，这样出错了也好改回去。博主有一次就是不知道自己改了啥，结果出错了，幸好根据出错信息定位到了两个文件，然后重新下载了一份干净的next文件作对比，才改过来。所以，一定不要作死。</li>
 <li>虽然个性化是可以让你的博客看起来高大上许多，但是不要太过了。忘了自己搭建博客的初心，只有文章才是最重要的，而且太多的个性化会影响博客的加载速度，得不偿失。</li>
 </ul>
-<h1 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h1><p>终于写完啦，如果除了文中博主提到的点。你还有其它问题，可以在评论区留言，我每一条都会回复哦~</p>
-<p>ps:近来发现文中有的链接已经失效啦，小伙伴们可以自行搜索哈。。。</p>
-<blockquote>
-<p>本文转载自<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">Ada.jmy</a></p>
-</blockquote>
+<h1 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h1><p>希望以上可以帮助到大家。</p>
 
       
     </div>
@@ -678,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭博客难吗？"><span class="nav-number">1.1.</span> <span class="nav-text">搭博客难吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需要自己知道一些背景知识吗？"><span class="nav-number">1.2.</span> <span class="nav-text">需要自己知道一些背景知识吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么搭建博客？"><span class="nav-number">1.3.</span> <span class="nav-text">为什么搭建博客？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建博客需要多长时间？"><span class="nav-number">1.4.</span> <span class="nav-text">搭建博客需要多长时间？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#背景知识"><span class="nav-number">2.</span> <span class="nav-text">背景知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立博客的渠道"><span class="nav-number">2.1.</span> <span class="nav-text">建立博客的渠道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么选择GithubPages和Hexo"><span class="nav-number">2.2.</span> <span class="nav-text">为什么选择GithubPages和Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念介绍"><span class="nav-number">2.3.</span> <span class="nav-text">概念介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HEXO"><span class="nav-number">2.3.1.</span> <span class="nav-text">HEXO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github"><span class="nav-number">2.3.2.</span> <span class="nav-text">Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-Pages"><span class="nav-number">2.3.3.</span> <span class="nav-text">GitHub Pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CodingPages"><span class="nav-number">2.3.4.</span> <span class="nav-text">CodingPages</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建过程"><span class="nav-number">3.</span> <span class="nav-text">搭建过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建步骤"><span class="nav-number">3.1.</span> <span class="nav-text">搭建步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我的建议和踩过的坑"><span class="nav-number">4.</span> <span class="nav-text">我的建议和踩过的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#个性化"><span class="nav-number">4.1.</span> <span class="nav-text">个性化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题选择"><span class="nav-number">4.2.</span> <span class="nav-text">主题选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按照主题文档设置"><span class="nav-number">4.3.</span> <span class="nav-text">按照主题文档设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他的个性化设置"><span class="nav-number">4.4.</span> <span class="nav-text">其他的个性化设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在Github上看issue或者提issue"><span class="nav-number">4.5.</span> <span class="nav-text">在Github上看issue或者提issue</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-End"><span class="nav-number">5.</span> <span class="nav-text">The End</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭博客难吗？"><span class="nav-number">1.1.</span> <span class="nav-text">搭博客难吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需要自己知道一些背景知识吗？"><span class="nav-number">1.2.</span> <span class="nav-text">需要自己知道一些背景知识吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么搭建博客？"><span class="nav-number">1.3.</span> <span class="nav-text">为什么搭建博客？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建博客需要多长时间？"><span class="nav-number">1.4.</span> <span class="nav-text">搭建博客需要多长时间？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#背景知识"><span class="nav-number">2.</span> <span class="nav-text">背景知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立博客的渠道"><span class="nav-number">2.1.</span> <span class="nav-text">建立博客的渠道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么选择GithubPages和Hexo"><span class="nav-number">2.2.</span> <span class="nav-text">为什么选择GithubPages和Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念介绍"><span class="nav-number">2.3.</span> <span class="nav-text">概念介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HEXO"><span class="nav-number">2.3.1.</span> <span class="nav-text">HEXO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github"><span class="nav-number">2.3.2.</span> <span class="nav-text">Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-Pages"><span class="nav-number">2.3.3.</span> <span class="nav-text">GitHub Pages</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建过程"><span class="nav-number">3.</span> <span class="nav-text">搭建过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建步骤"><span class="nav-number">3.1.</span> <span class="nav-text">搭建步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我的建议和踩过的坑"><span class="nav-number">4.</span> <span class="nav-text">我的建议和踩过的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#个性化"><span class="nav-number">4.1.</span> <span class="nav-text">个性化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题选择"><span class="nav-number">4.2.</span> <span class="nav-text">主题选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按照主题文档设置"><span class="nav-number">4.3.</span> <span class="nav-text">按照主题文档设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他的个性化设置"><span class="nav-number">4.4.</span> <span class="nav-text">其他的个性化设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在Github上看issue或者提issue"><span class="nav-number">4.5.</span> <span class="nav-text">在Github上看issue或者提issue</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-End"><span class="nav-number">5.</span> <span class="nav-text">The End</span></a></li></ol></div>
             
 
           </div>
