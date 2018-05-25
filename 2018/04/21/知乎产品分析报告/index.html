@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="产品," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="知乎作为大型中文问答社区，连接着各行各业的人员。用户可通过分享自己的知识、经验和见解，为平台提供源源不断的知识血液。对于概念性的解释，几乎涵盖了你所有的疑问；对于天马行空的想象，也能满足你发散思维的要求。作为本人求职产品经理的探索之路，本文为知乎产品分析报告。">
+<meta name="keywords" content="产品">
+<meta property="og:type" content="article">
+<meta property="og:title" content="知乎产品分析报告">
+<meta property="og:url" content="http://yoursite.com/2018/04/21/知乎产品分析报告/index.html">
+<meta property="og:site_name" content="Zkb&#39;s blog">
+<meta property="og:description" content="知乎作为大型中文问答社区，连接着各行各业的人员。用户可通过分享自己的知识、经验和见解，为平台提供源源不断的知识血液。对于概念性的解释，几乎涵盖了你所有的疑问；对于天马行空的想象，也能满足你发散思维的要求。作为本人求职产品经理的探索之路，本文为知乎产品分析报告。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload.chinaz.com/2015/0806/1438825044462.png">
+<meta property="og:image" content="http://image.woshipm.com/wp-files/2018/05/JewSmfTGvCgrtn3GJnso.jpg">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E7%9F%A5%E4%B9%8E%E5%B9%B4%E9%BE%84%E6%AE%B5.png">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E7%99%BE%E5%BA%A6%E6%8C%87%E6%95%B0.png">
+<meta property="og:image" content="http://image.woshipm.com/wp-files/2018/05/0IAZpr0xjBq8oU0grZ1H.jpg">
+<meta property="og:image" content="http://image.woshipm.com/wp-files/2018/05/bMqMG8ZKrPUiiiAOgbez.jpg">
+<meta property="og:image" content="http://image.woshipm.com/wp-files/2018/05/KibwKZFrsD9hq79YOTt8.jpg">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E7%9F%A5%E4%B9%8E.png">
+<meta property="og:image" content="http://image.woshipm.com/wp-files/2018/05/hEpQS8bmIu0V1msQlEVY.jpg">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E7%9F%A5%E4%B9%8E%E6%8F%90%E9%97%AE.jpg">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/11.jpg">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E7%A7%81%E5%AE%B6%E8%AF%BE.jpg">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E7%9F%A5%E4%B9%8E%E4%B9%A6%E5%BA%97.jpg">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E6%83%B3%E6%B3%95.jpg">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E7%9F%A5%E4%B9%8E%E8%AF%84%E5%88%86.png">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E8%AF%84%E8%AE%BA1.jpg">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E7%95%8C%E9%9D%A2%E5%A4%8D%E6%9D%82.png">
+<meta property="og:image" content="http://oyrp3dykr.bkt.clouddn.com/%E7%B4%A0%E8%B4%A81.png">
+<meta property="og:updated_time" content="2018-05-25T09:39:37.214Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="知乎产品分析报告">
+<meta name="twitter:description" content="知乎作为大型中文问答社区，连接着各行各业的人员。用户可通过分享自己的知识、经验和见解，为平台提供源源不断的知识血液。对于概念性的解释，几乎涵盖了你所有的疑问；对于天马行空的想象，也能满足你发散思维的要求。作为本人求职产品经理的探索之路，本文为知乎产品分析报告。">
+<meta name="twitter:image" content="http://upload.chinaz.com/2015/0806/1438825044462.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/21/知乎产品分析报告/"/>
+
+
+
+
+
+  <title>知乎产品分析报告 | Zkb's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zkb's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Love CCC♥.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/21/知乎产品分析报告/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Kaibo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zkb's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">知乎产品分析报告</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-21T19:21:15+08:00">
+                2018-04-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/21/知乎产品分析报告/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/04/21/知乎产品分析报告/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>知乎作为大型中文问答社区，连接着各行各业的人员。用户可通过分享自己的知识、经验和见解，为平台提供源源不断的知识血液。对于概念性的解释，几乎涵盖了你所有的疑问；对于天马行空的想象，也能满足你发散思维的要求。作为本人求职产品经理的探索之路，本文为知乎产品分析报告。</p>
+</blockquote>
+<p><img src="http://upload.chinaz.com/2015/0806/1438825044462.png" width="900" height="400" alt="照片">   </p>
+<a id="more"></a>
+<hr>
+<h1 id="一、产品概述"><a href="#一、产品概述" class="headerlink" title="一、产品概述"></a>一、产品概述</h1><h2 id="1-体验环境"><a href="#1-体验环境" class="headerlink" title="1.体验环境"></a>1.体验环境</h2><ul>
+<li>体验版本：4.15.0</li>
+<li>体验设备：iphone7 (32G)</li>
+<li>系统版本：11.3.1</li>
+<li>体验时间：2018.5</li>
+</ul>
+<h2 id="2-产品概括"><a href="#2-产品概括" class="headerlink" title="2.产品概括"></a>2.产品概括</h2><p>准确的来讲，知乎更像是一个论坛。用户可以提问并邀请相关用户进行回答。对于一些前沿知识，需要用户的学历水平较高。</p>
+<p>知乎的图标主色调为蓝色，寓意为深蓝色的知识海。海之大，需要用户不断探索。“知”字是应用的核心，右边的口像一个对话框，更让人一眼识别出这是有关问答的软件。图标的设计符合互联网追求简单、追求效率的特征。</p>
+<h2 id="3-产品定位"><a href="#3-产品定位" class="headerlink" title="3.产品定位"></a>3.产品定位</h2><p>知乎使用的slogan：</p>
+<blockquote>
+<p>“与世界分享你的知识、经验和见解”以及“发现更大的世界”。</p>
+</blockquote>
+<p>slogan的定位就在于知识分享。知乎相对于其他平台的问答水平较高，得益于平台用户的水准以及平台正确的引导。</p>
+<p>知乎回答中的特色在于对于回答较好的答案，用户可以通过点赞进行支持，票数较高的可以排在靠前的位置，使得优秀的答案有更多的曝光率，让提问的人筛选出更匹配的答案。对于一些回答无关或者有争议的答案，知乎会进行折叠处理，能够有效的避免题不相关的回答的出现，降低用户的体验。</p>
+<p>此外，知乎经过多轮版本的更迭，也出现了一些新的功能。例如live、私家课、付费咨询等等，这些付费模式的出现，使得用户可以通过消费更有针对性的得到高质量的信息。</p>
+<h2 id="4-用户需求分析"><a href="#4-用户需求分析" class="headerlink" title="4.用户需求分析"></a>4.用户需求分析</h2><h3 id="（1）用户画像"><a href="#（1）用户画像" class="headerlink" title="（1）用户画像"></a>（1）用户画像</h3><p>在知乎上的高质量内容回答中，往往能看到一些业内顶尖人士的回复。<br><img src="http://image.woshipm.com/wp-files/2018/05/JewSmfTGvCgrtn3GJnso.jpg" width="900" height="400" alt="照片"> </p>
+<center>数据来源：艾瑞咨询</center><br>知乎当今深受学生群体的欢迎，同时互联网从业者也是重要的用户群体之一。无论用户想了解动漫、游戏、音乐、时事、旅行、美食、科技等等，都有行业人才进行回复。对于业内小白来说，知乎可以说是他们未进入社会前一个世界的窗口，通过置顶的高点赞答案，能够激励读者向更深处摸索。<br><img src="http://oyrp3dykr.bkt.clouddn.com/%E7%9F%A5%E4%B9%8E%E5%B9%B4%E9%BE%84%E6%AE%B5.png" width="900" height="400" alt="照片"><br><center>数据来源：艾瑞咨询</center><br>从使用分布的年龄段来看，19-24岁是这个用户群的主力军，大部分都处于学生或者刚刚工作的阶段，对于知识的渴求会比其他年龄段略大，也可以看出从25岁开始，用户数量呈下降趋势，算是一个主要针对年轻人的APP。<br><img src="http://oyrp3dykr.bkt.clouddn.com/%E7%99%BE%E5%BA%A6%E6%8C%87%E6%95%B0.png" width="900" height="200" alt="照片"><br><center>数据来源：百度指数</center><br>从使用的时间段来看，与火爆的直播相比，知乎在周末的时段搜索率处于下降阶段，直播的搜索率在周内处于稳定，周末处于上升阶段。直播对于大部分年轻人而言属于一种放松娱乐的方式，而知乎属于学习类的软件，在周末的使用率比较低。<br><div align="center"><img src="http://image.woshipm.com/wp-files/2018/05/0IAZpr0xjBq8oU0grZ1H.jpg" width="450" height="250" alt="知乎用户学历分布"> </div><br><center>数据来源：艾瑞咨询</center>
+
+<p>从用户学历分布来看，知乎用户的大部分都处于大学本科阶段，这个学历分布作为一款面向公众的软件，实为难得。</p>
+<p>通过分析猜测知乎的用户群体有大概以下几种类别：</p>
+<ul>
+<li>大学生群体：从刚入学的新生到即将走向工作岗位的年轻人来说，外界充满了位置。知乎平台作为了解世界的窗口，可以获取大量的社会经验。</li>
+<li>职场新人：当职场新人初入社会时，经验的不足或者工作不满意时，可以来到知乎这个平台看看前辈走过的路，通过汲取不足为自己以后的方向少走弯路，大量的相关人士的经验、故事的分享，可以为新人制定更明确的职场方向。</li>
+<li>好奇群体：也许一些人只是为了好玩，对一切新鲜的事物充满好奇，从天空到海洋，从宇宙到蚂蚁，对于他们都是大大的谜团，他们的存在也让知乎多了一个活跃的群体。</li>
+<li>文艺群体：除了高新科技外，对于电影、动漫和文学作品来说，也有一部分群体专门讨论各种问题，他们对于共同的兴趣爱好通过分享评论使他们能够获得更大的满足感。</li>
+<li>内容创造者：有一句话之前甚是流行–知乎，分享你刚编的故事。这些人的故事通常回忆起来充满着细节，仔细分辨就知道真伪，不过不妨碍大部分人的感同身受，让读者感觉到：啊，还有这样的事存在。无不叫好点赞。</li>
+</ul>
+<p>通过以上的分析发现知乎的用户群体还是多种多样的，相比于段子、笑话等这种娱乐性话题在知乎上不是很常见。</p>
+<h3 id="（2）用户需求"><a href="#（2）用户需求" class="headerlink" title="（2）用户需求"></a>（2）用户需求</h3><p>根据需求层次的深浅，将用户的需求划分为三个层次，依次为基本型需求，期望型需求以及兴奋型需求。</p>
+<ul>
+<li>基本型需求：能够找到自己问题的答案，如果没有找到可以通过发起提问的方式来获得。</li>
+<li>期望型需求：通过付费的方式得到自己想要的信息，节省时间，获得针对性的回答。</li>
+<li>兴奋型需求：知乎上的高赞很多都是由高V进行回答，如果通过知乎平台获得联系的话，会获得兴奋的体验。</li>
+</ul>
+<h2 id="5-市场现状和分析"><a href="#5-市场现状和分析" class="headerlink" title="5.市场现状和分析"></a>5.市场现状和分析</h2><h3 id="（1）行业分析"><a href="#（1）行业分析" class="headerlink" title="（1）行业分析"></a>（1）行业分析</h3><p>信息爆炸的时代已经到来，用户想要搜索自己想要的高质量数据不是一件容易的事。</p>
+<p>付费数据应运而生，如果能够得到优秀的内容，用户是不会吝啬金钱的。<br><img src="http://image.woshipm.com/wp-files/2018/05/bMqMG8ZKrPUiiiAOgbez.jpg" width="900" height="500" alt="照片"> </p>
+<p><center>数据来源：艾瑞咨询</center><br>从以上数据发现，从17年1月份开始到17年12月，设备数的增长率为72%，这是一个很高的增长速度。</p>
+<h3 id="（2）市场数据"><a href="#（2）市场数据" class="headerlink" title="（2）市场数据"></a>（2）市场数据</h3><div align="center"><img src="http://image.woshipm.com/wp-files/2018/05/KibwKZFrsD9hq79YOTt8.jpg" width="450" height="250" alt="知乎用户学历分布"> </div>
+
+<p>从下载量上看，知乎的下载量在与得到、简书和在行比具有绝对优势，比三款产品下载量总和还要翻几倍。其实归根到底，再付费问答上线之前，知乎就有着很好的用户基础，在问答上也有很高的知名度。当付费问答上线后，高质量用户能够顺利实行。虽然大部分用户还是属于非付费用户，如何提高转换率是未来的运营方向。</p>
+<hr>
+<h1 id="二、产品分析"><a href="#二、产品分析" class="headerlink" title="二、产品分析"></a>二、产品分析</h1><h2 id="1-产品结构图"><a href="#1-产品结构图" class="headerlink" title="1.产品结构图"></a>1.产品结构图</h2><p>这个版本知乎的功能区有5个：首页、想法、市场、消息、我的这五个区域。结构图如下所示：</p>
+<p><div align="center"><img src="http://oyrp3dykr.bkt.clouddn.com/%E7%9F%A5%E4%B9%8E.png" width="600" height="900" alt="知乎用户学历分布"> </div><br>从上面的结构图看，知乎上付费的特点已经很明显。在市场入口成集成了大量的付费功能，从Live小讲、私家课、书店、无限计划到读书会等全部都可供用户购买。</p>
+<h2 id="2-用户使用流程图"><a href="#2-用户使用流程图" class="headerlink" title="2.用户使用流程图"></a>2.用户使用流程图</h2><p><div align="center"><img src="http://image.woshipm.com/wp-files/2018/05/hEpQS8bmIu0V1msQlEVY.jpg" width="400" height="700" alt="知乎用户学历分布"> </div><br>上图为用户使用问答功能的具体操作流程，对于一个话题的回复，可以进行感谢、收藏、赞同、分享以及没有帮助的操作。</p>
+<p>问答作为主打功能，需要给用户提供更好答案的曝光率，通过以上精细化操作可以保证一个答案的质量。</p>
+<p>##3.功能体验分析</p>
+<h3 id="（1）用户评论的机制"><a href="#（1）用户评论的机制" class="headerlink" title="（1）用户评论的机制"></a>（1）用户评论的机制</h3><p>虽然在大多数应用中用户对于评论都可以进行操作，例如赞同、不赞同或者评论等等。知乎不仅做到了这些，还可以收藏、感谢、分享、没有帮助和举报的功能。一共有8种回答的操作。</p>
+<p>这种机制看起来繁琐，却让精品答案更容易的出现在提问者的眼前，用户就可以节省时间去研究答案的本身而不是获取答案的路径。</p>
+<h3 id="（2）邀请回答机制"><a href="#（2）邀请回答机制" class="headerlink" title="（2）邀请回答机制"></a>（2）邀请回答机制</h3><p><div align="center"><img src="http://oyrp3dykr.bkt.clouddn.com/%E7%9F%A5%E4%B9%8E%E6%8F%90%E9%97%AE.jpg" width="700" height="400" alt="知乎提问"> </div><br>当用户进行提问时，需要三个步骤即可上传问题。首先进入提问界面，输入问题后以“？”结尾，对问题进行具体的描述，再通过建立标签便可以发布问题了。除了等待他人的回复，你可以通过邀请相关人士进行回答。这种模式会减少等待的时间，同时让适合回答问题的人进行回答，也能够提升答案的水准。</p>
+<h3 id="（3）Live小讲功能花钱买经验"><a href="#（3）Live小讲功能花钱买经验" class="headerlink" title="（3）Live小讲功能花钱买经验"></a>（3）Live小讲功能花钱买经验</h3><p><div align="center"><img src="http://oyrp3dykr.bkt.clouddn.com/11.jpg" width="233" height="400" alt="知乎提问"> </div><br>知识付费模式浪潮来临后，本身拥有大量高质量用户的知乎开始发力，虽然得到、在行一点（原问答）也取得了成功，但是知乎上的用户对于知识付费的接受程度远远高于大部分普通用户，知乎的成功不难想象。</p>
+<p>知乎Live分为五块内容，分类浏览、课程与专题、热门精选、我的订阅、我的Live，其中分类浏览几乎涵盖了所有范围的知识。知乎Live提供了用户和大牛在线交流的机会，拉进了彼此的距离，用户可以通过小部分金钱来获得大牛几年来的行业知识，一瓶饮料、一顿饭钱的价格来获取知识，确实是一比划算的买卖。</p>
+<h3 id="（4）知乎私家课"><a href="#（4）知乎私家课" class="headerlink" title="（4）知乎私家课"></a>（4）知乎私家课</h3><p><div align="center"><img src="http://oyrp3dykr.bkt.clouddn.com/%E7%A7%81%E5%AE%B6%E8%AF%BE.jpg" width="700" height="400" alt="知乎提问"> </div><br>私家课和Live不同的点在于是一个完整的体系，用户可以学到完整的知识，不过只有音频模式。</p>
+<p>私家课配备有变速的选项，可以让用户根据实际需要来控制课程的播放速度，而且可以试听几节课，可以说是非常人性化的选择。相比于腾讯课堂的价格来说，基本维持在百元左右，没有上万的课程，而且私家课更多的是个人软实力的提升，腾讯课堂定位在就业与升学。</p>
+<h3 id="（5）知乎书店"><a href="#（5）知乎书店" class="headerlink" title="（5）知乎书店"></a>（5）知乎书店</h3><p><div align="center"><img src="http://oyrp3dykr.bkt.clouddn.com/%E7%9F%A5%E4%B9%8E%E4%B9%A6%E5%BA%97.jpg" width="700" height="400" alt="知乎书店"> </div><br>知乎也可以购买到电子图书，而且它有它自己的专栏板块——知乎出品。该栏目下，拥有知乎自己出品的一些图书，能够使购买者有着更强烈的归属感。此外，平台可以运用大数据统计用户更想要什么，使得图书更能对症下药，直击痛点。</p>
+<h3 id="（6）想法功能"><a href="#（6）想法功能" class="headerlink" title="（6）想法功能"></a>（6）想法功能</h3><p><div align="center"><img src="http://oyrp3dykr.bkt.clouddn.com/%E6%83%B3%E6%B3%95.jpg" width="700" height="400" alt="知乎想法"> </div><br>知乎想法独占一个入口，可见其重视程度，模式类似于空间、朋友圈、或者微博，有一定的社交含义。利用这个功能可以增加用户之间的交流，来增加日活跃用户以及用户黏性的目的。</p>
+<h3 id="（7）小结"><a href="#（7）小结" class="headerlink" title="（7）小结"></a>（7）小结</h3><p>通过以上的介绍，发现知乎的功能有以下特点：</p>
+<ul>
+<li>通过对回答的点赞以及邀请机制打造高质量问答社区。</li>
+<li>Live小讲、私家课、书店等共同构成了付费功能板块。</li>
+<li>想法使平台社交化，增加用户亲密度。</li>
+</ul>
+<hr>
+<h1 id="三、用户意见"><a href="#三、用户意见" class="headerlink" title="三、用户意见"></a>三、用户意见</h1><h2 id="1-用户总体的满意度并不是很高"><a href="#1-用户总体的满意度并不是很高" class="headerlink" title="1.用户总体的满意度并不是很高"></a>1.用户总体的满意度并不是很高</h2><p><div align="center"><img src="http://oyrp3dykr.bkt.clouddn.com/%E7%9F%A5%E4%B9%8E%E8%AF%84%E5%88%86.png" width="700" height="400" alt="知乎评分"> </div><br>知乎在当前版本的用户评分还不到两分，较所有版本评分中的3分有下降趋势，相比于腾讯课堂来说还是有很大的差距。</p>
+<h2 id="2-内容质量逐渐下降"><a href="#2-内容质量逐渐下降" class="headerlink" title="2.内容质量逐渐下降"></a>2.内容质量逐渐下降</h2><p><div align="center"><img src="http://oyrp3dykr.bkt.clouddn.com/%E8%AF%84%E8%AE%BA1.jpg" width="700" height="200" alt="知乎评分"> </div><br>不少人对于内容的变化有所不满，低俗的内容、标题党以及段子手的文章充斥在他们的推送里，知乎用户大部分都在周内使用，某种程度而言，对新知识的学习以及相关领域的学习比推送娱乐文章要好的多。知乎相对于以前的高质量严谨回答中，八卦、低俗的内容多了不少。</p>
+<p>在我自己使用的过程中也出现过这种现象，除了我关注的领域，一些娱乐段子的点赞数往往更高，虽然大家也会点开看看图一乐，但是此时又和一些无脑APP有什么区别呢，如果不及时把关，势必成为真正的“逼乎”，或者是下一个内涵段子和百度贴吧。</p>
+<p>或许那时候，付费模块才有有用价值信息，免费模式全部变成娱乐大众搏眼球的模块。</p>
+<h2 id="3-界面复杂"><a href="#3-界面复杂" class="headerlink" title="3.界面复杂"></a>3.界面复杂</h2><p><div align="center"><img src="http://oyrp3dykr.bkt.clouddn.com/%E7%95%8C%E9%9D%A2%E5%A4%8D%E6%9D%82.png" width="700" height="50" alt="界面"> </div><br>知乎功能模块多，每个板块又包含了大量的分支，有时候新版本更新后，相比于上版本用户已经熟练后的操作，上手新版本不习惯会造成用户评分较低。</p>
+<p>从首页的推荐内容来看，推荐的内容学习与娱乐参半。首页像是一个菜市场，你要的或者你不要的都有，想法像是个大型朋友圈，市场则是付费用户的避暑胜地。对于一个从问答起家的APP而言，内容的臃肿会使定位变的不那么明确，虽然功能多，用户对于核心功能的体验变差。</p>
+<h2 id="4-用户素质下降"><a href="#4-用户素质下降" class="headerlink" title="4.用户素质下降"></a>4.用户素质下降</h2><p><div align="center"><img src="http://oyrp3dykr.bkt.clouddn.com/%E7%B4%A0%E8%B4%A81.png" width="700" height="50" alt="素质"> </div><br>随着用户数量的增加，用户质量的下降是必然结果。高质量用户出走，低质量用户流入会造成恶性循环。</p>
+<p>很多软件都经历过这个阶段，就像以前的百度贴吧大家用来讨论自己感兴趣的方向，到现在已经成为段子、八卦、水军的天下，新来的用户都不知道以前是多么纯洁的一个APP。而且知乎上回答的用户，有的一副自己高高在上的样子，知乎平均年薪云云，让人觉得逼格太高，用户的距离很远。</p>
+<hr>
+<h1 id="四、如果我是PM"><a href="#四、如果我是PM" class="headerlink" title="四、如果我是PM"></a>四、如果我是PM</h1><h2 id="1-增加已读功能"><a href="#1-增加已读功能" class="headerlink" title="1.增加已读功能"></a>1.增加已读功能</h2><p>对于作者来说，会关注某类特定的话题，每天都搜这个问题查看，但是很多时候都是自己看过的内容，有时候同一时间看过几十条回答，过几天再浏览时也不知道这些回答哪些是新的，哪些自己以前看过，如果增加已读功能，或者已读的回答中增加颜色显示。</p>
+<p>例如百度贴吧的帖子，未阅读时标题是比较明亮的，已读后标题变暗，用户可以筛选哪些看过哪些没有看过。避免重复阅读。</p>
+<h2 id="2-推出知乎极速版"><a href="#2-推出知乎极速版" class="headerlink" title="2.推出知乎极速版"></a>2.推出知乎极速版</h2><p>不少浏览器或者软件都有极速版，例如360浏览器与360极速浏览器，QQ和TIM等等。知乎的功能很多，但是大部分人只使用日常简单的功能。对于一些有洁癖或者重视内容的人来说，大部分功能日常根本不需要。对于五个大板块，只保留问答功能，删除市场、想法等无用功能，对用户来说是一种福音。</p>
+<h2 id="3-回答排序功能"><a href="#3-回答排序功能" class="headerlink" title="3.回答排序功能"></a>3.回答排序功能</h2><p>在一些热门问题下的回答通常由上千条，用户可以花大量的时间来浏览，如果有事浏览到一半，用户需要从头开始来查找，是一个极其浪费时间的行为。现在回答的排序只有默认和按时间来排序，可以考虑增加按未读或者近期热门来排序，有一些答案的时间已非常久远，对于飞速发展的今天已经不大具备参考价值。而新鲜出炉并且点赞速度较快的答案如果能够得到更多的曝光率，对于知识的精准定位能够提升用户的满意度。</p>
+<hr>
+<h1 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h1><p>知乎用户增速很快以及软件需要盈利是两个客观存在的事实，同时也导致了用户质量下降以及广告增多，广告已经随便翻几个答案就是知乎自己或者其他的广告，占据了大量的篇幅，这两个原因导致不少老用户离开知乎。</p>
+<p>希望知乎在推出付费问答等各种付费模式后，有高质量的内容来盈利，而不是引入质量参差不齐的用户以及打很多广告来盈利。希望知乎能回归初心：与世界分享你的知识、经验和见解。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/产品/" rel="tag"><i class="fa fa-tag"></i> 产品</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/06/生日快乐小仙女！/" rel="next" title="生日快乐小仙女！">
+                <i class="fa fa-chevron-left"></i> 生日快乐小仙女！
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/25/微信原型制作说明/" rel="prev" title="微信原型制作说明">
+                微信原型制作说明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Zhang Kaibo" />
+            
+              <p class="site-author-name" itemprop="name">Zhang Kaibo</p>
+              <p class="site-description motion-element" itemprop="description">HelloZkb</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/HelloZkb" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/wo-hui-tian-ma-liu-xing-quan-a/activities" target="_blank" title="知乎">
+                    
+                      <i class="fa fa-fw fa-globe"></i>知乎</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+<br>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=5279993&auto=0&height=66"></iframe>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、产品概述"><span class="nav-number">1.</span> <span class="nav-text">一、产品概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-体验环境"><span class="nav-number">1.1.</span> <span class="nav-text">1.体验环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-产品概括"><span class="nav-number">1.2.</span> <span class="nav-text">2.产品概括</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-产品定位"><span class="nav-number">1.3.</span> <span class="nav-text">3.产品定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-用户需求分析"><span class="nav-number">1.4.</span> <span class="nav-text">4.用户需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）用户画像"><span class="nav-number">1.4.1.</span> <span class="nav-text">（1）用户画像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）用户需求"><span class="nav-number">1.4.2.</span> <span class="nav-text">（2）用户需求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-市场现状和分析"><span class="nav-number">1.5.</span> <span class="nav-text">5.市场现状和分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）行业分析"><span class="nav-number">1.5.1.</span> <span class="nav-text">（1）行业分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）市场数据"><span class="nav-number">1.5.2.</span> <span class="nav-text">（2）市场数据</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、产品分析"><span class="nav-number">2.</span> <span class="nav-text">二、产品分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-产品结构图"><span class="nav-number">2.1.</span> <span class="nav-text">1.产品结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-用户使用流程图"><span class="nav-number">2.2.</span> <span class="nav-text">2.用户使用流程图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）用户评论的机制"><span class="nav-number">2.2.1.</span> <span class="nav-text">（1）用户评论的机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）邀请回答机制"><span class="nav-number">2.2.2.</span> <span class="nav-text">（2）邀请回答机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（3）Live小讲功能花钱买经验"><span class="nav-number">2.2.3.</span> <span class="nav-text">（3）Live小讲功能花钱买经验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（4）知乎私家课"><span class="nav-number">2.2.4.</span> <span class="nav-text">（4）知乎私家课</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（5）知乎书店"><span class="nav-number">2.2.5.</span> <span class="nav-text">（5）知乎书店</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（6）想法功能"><span class="nav-number">2.2.6.</span> <span class="nav-text">（6）想法功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（7）小结"><span class="nav-number">2.2.7.</span> <span class="nav-text">（7）小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、用户意见"><span class="nav-number">3.</span> <span class="nav-text">三、用户意见</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-用户总体的满意度并不是很高"><span class="nav-number">3.1.</span> <span class="nav-text">1.用户总体的满意度并不是很高</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-内容质量逐渐下降"><span class="nav-number">3.2.</span> <span class="nav-text">2.内容质量逐渐下降</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-界面复杂"><span class="nav-number">3.3.</span> <span class="nav-text">3.界面复杂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-用户素质下降"><span class="nav-number">3.4.</span> <span class="nav-text">4.用户素质下降</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、如果我是PM"><span class="nav-number">4.</span> <span class="nav-text">四、如果我是PM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-增加已读功能"><span class="nav-number">4.1.</span> <span class="nav-text">1.增加已读功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-推出知乎极速版"><span class="nav-number">4.2.</span> <span class="nav-text">2.推出知乎极速版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-回答排序功能"><span class="nav-number">4.3.</span> <span class="nav-text">3.回答排序功能</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、总结"><span class="nav-number">5.</span> <span class="nav-text">五、总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhang Kaibo</span>
+
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+-->
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/04/21/知乎产品分析报告/';
+          this.page.identifier = '2018/04/21/知乎产品分析报告/';
+          this.page.title = '知乎产品分析报告';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+</body>
+
+
+</html>
